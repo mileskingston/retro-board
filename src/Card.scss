@@ -1,0 +1,23 @@
+.card {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ececec;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+
+    > input {
+      padding: 0;
+      font-size: 16px;
+      height: 16px;
+    }
+  }
+
+  &__like-btn {
+    display: inline-block;
+  }
+}

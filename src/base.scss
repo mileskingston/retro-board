@@ -1,0 +1,110 @@
+@import './reset.scss';
+@import './variables.scss';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $off-white;
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 5px 10px;
+  background-color: $primary-color;
+  font-size: 16px;
+  color: $white;
+  border: 0;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+
+  &--add {
+    max-width: 50px;
+  }
+
+  &--like, &--delete {
+    @include hide-btn-text();
+    padding: 0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &--like {
+    width: 24px;
+    height: 24px;
+    background-image: url($like-icon);
+  }
+  &--delete {
+    width: 20px;
+    height: 24px;
+    margin-right: 10px;
+    background-image: url($delete-icon);
+  }
+
+  &--color {
+    @include hide-btn-text();
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin-right: 5px;
+    
+    @each $name, $color in $colors {
+      &-#{$name} {
+        background: $color;
+      }
+    }
+  }
+
+}
+
+.input {
+  font-size: 16px;
+
+  &--no-bg {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+
+  &--info {
+    background-color: #81ecec;
+  }
+}
+
+// Components
+@import './App.scss';
+@import './Board.scss';
+@import './Column.scss';
+@import './Card.scss';

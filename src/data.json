@@ -1,0 +1,31 @@
+{
+  "colors": [
+    {
+      "name": "blue",
+      "value": "#0984e3"
+    },
+    {
+      "name": "green",
+      "value": "#00cec9"
+    },
+    {
+      "name": "orange",
+      "value": "#e17055"
+    }
+  ],
+  "selectColor": {
+    "name": "blue",
+    "value": "#0984e3"
+  },
+  "board": {
+    "title": "Board title"
+  },
+  "column": {
+    "title": "Column Title"
+  },
+  "card": {
+    "id": 1,
+    "text": "Example text",
+    "likes": 0
+  }
+}

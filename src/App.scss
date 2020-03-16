@@ -1,0 +1,47 @@
+.retro-board {
+  &__header {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: $header-color;
+    color: $white;
+  }
+
+  &__main {
+    padding: 0 10px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    > h2 {
+      display: inline-block;
+      margin-bottom: 0;
+
+      .retro-board__title-icon {
+        display: none;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 16px 16px;
+        width: 14px;
+        height: 14px;
+        background-image: url($edit-icon);
+      }
+  
+      &:hover {
+        .retro-board__title-icon {
+          margin-left: 10px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .input {
+      height: 20px;
+      font-size: 20px;
+    }
+  }
+}

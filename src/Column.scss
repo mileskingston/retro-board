@@ -1,0 +1,26 @@
+.column {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: $white;
+  border-radius: 3px;
+  @include box-shadow;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+  }
+}
